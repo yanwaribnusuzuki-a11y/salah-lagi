@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mobil Suzuki Baru — Yanwar Ibnu</title>
+  <meta name="description" content="Dealer pribadi Yanwar Ibnu — Suzuki Fronx, XL7, Jimny, S-Presso, Grand Vitara, New Carry & Ertiga. Booking test drive, promo, kredit, dan konsultasi via WhatsApp.">
+  <meta name="theme-color" content="#1976d2">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231976d2'/%3E%3Ctext x='50' y='57' font-size='45' text-anchor='middle' fill='white' font-family='Arial, sans-serif'%3EY%3C/text%3E%3C/svg%3E">
+  <style>
+    :root{--blue:#1976d2;--red:#d32f2f;--muted:#666;--card:#fff;--glass:rgba(255,255,255,0.6);--radius:12px}
+    *{box-sizing:border-box}
+    body{font-family:Inter, 'Segoe UI', Roboto, Arial, sans-serif;margin:0;background:linear-gradient(180deg,#f4fbff 0%, #fff 100%);color:#111;transition:background .3s,color .3s}
+    a{color:var(--blue);text-decoration:none}
+    .wrap{max-width:1200px;margin:20px auto;padding:16px}
+    header{display:flex;gap:16px;align-items:center;background:var(--blue);color:#fff;padding:18px;border-radius:12px}
+    .logo img{width:56px;height:56px}
+    header h1{margin:0;font-size:1.3rem}
+    header p{margin:0;font-size:0.9rem;opacity:0.95}
+    nav{margin-left:auto;display:flex;gap:10px}
+    .btn{display:inline-block;padding:8px 12px;border-radius:10px;font-weight:700}
+    .whatsapp{background:#25d366;color:#fff}
+
+    /* main layout */
+    .top{display:grid;grid-template-columns:1fr 340px;gap:18px;margin-top:18px}
+    @media(max-width:980px){.top{grid-template-columns:1fr}}
+    .card{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 10px 30px rgba(15,23,42,0.06)}
+
+    /* slider */
+    .slider{position:relative;border-radius:10px;overflow:hidden;height:320px}
+    .slides{display:flex;transition:transform .6s cubic-bezier(.2,.9,.3,1)}
+    .slide{min-width:100%;height:320px;background-size:cover;background-position:center;display:grid;place-items:center}
+    .caption{background:linear-gradient(90deg,rgba(0,0,0,0.45),rgba(0,0,0,0.2));color:#fff;padding:10px 14px;border-radius:10px}
+    .ctrl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.24);border:none;padding:10px;border-radius:8px;cursor:pointer}
+    .ctrl.left{left:10px}.ctrl.right{right:10px}
+
+    /* search & filters */
+    .controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
+    .search{flex:1;min-width:200px}
+    input[type="search"],select{width:100%;padding:8px;border-radius:8px;border:1px solid #e6e6e6}
+
+    /* product grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:14px}
+    .item{background:var(--card);border-radius:12px;padding:10px;box-shadow:0 6px 18px rgba(10,15,30,0.05);text-align:center}
+    .item img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+    .item h4{margin:8px 0 6px;font-size:1rem}
+    .item p{margin:0;color:var(--muted);font-size:0.95rem}
+    .item .actions{margin-top:8px;display:flex;gap:8px;justify-content:center}
+    .primary{background:var(--red);color:#fff;padding:8px 12px;border-radius:8px;border:none;cursor:pointer}
+
+    /* floating action buttons */
+    .fab{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:999}
+    .fab a{display:inline-grid;place-items:center;width:56px;height:56px;border-radius:50%;box-shadow:0 6px 18px rgba(10,15,30,0.2);background:var(--blue);color:#fff;font-weight:700}
+    .fab a.phone{background:#0b8043}
+    .fab a.book{background:var(--red)}
+
+    /* modal/detail page */
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:none;align-items:center;justify-content:center;padding:18px}
+    .modal .panel{background:var(--card);width:100%;max-width:980px;border-radius:12px;padding:18px;max-height:90vh;overflow:auto}
+    .close{float:right;background:#eee;border-radius:8px;padding:6px 8px;cursor:pointer}
+
+    /* dark mode */
+    .dark{background:#071023;color:#e6eef9}
+    .dark header{background:#052a4a}
+    .dark .card{background:#042033}
+    .dark .item{background:#063047}
+
+    /* promo table */
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{padding:8px;border-bottom:1px solid #eee;text-align:left}
+
+    /* small */
+    .muted{color:var(--muted)}
+    .tag{display:inline-block;background:#eef6ff;color:var(--blue);padding:6px 8px;border-radius:999px;font-weight:700}
+    .search-results{margin-top:8px;color:var(--muted)}
+
+    /* animations */
+    .fadeIn{animation:fadeIn .7s both}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Suzuki_logo_2.svg" alt="Suzuki"></div>
+      <div>
+        <h1>Yanwar Ibnu — Dealer Suzuki Resmi</h1>
+        <p class="muted">Fronx · XL7 · Jimny · S‑Presso · Grand Vitara · New Carry · Ertiga — booking test drive mudah</p>
+      </div>
+      <nav>
+        <button id="toggleDark" class="btn">🌙</button>
+        <a class="btn whatsapp" href="https://wa.me/6287854322142?text=Hai%20Yanwar%20Ibnu,%20saya%20mau%20tanya" target="_blank">Chat</a>
+        <a class="btn" href="https://www.tiktok.com/@Ibnu.Suzuki" target="_blank">TikTok</a>
+      </nav>
+    </header>
+
+    <section class="top">
+      <div>
+        <div class="card fadeIn">
+          <div class="slider" aria-roledescription="carousel">
+            <div class="slides" id="slides">
+              <div class="slide" style="background-image:url('https://www.suzuki.co.id/assets/mobil/fronx/gallery/1.webp');"><div class="caption">Suzuki Fronx — Urban SUV</div></div>
+              <div class="slide" style="background-image:url('https://www.suzuki.co.id/assets/mobil/xl7-hybrid/gallery/Exterior-1.webp');"><div class="caption">Suzuki XL7 Hybrid — 7-seater Stylish</div></div>
+              <div class="slide" style="background-image:url('https://www.suzuki.co.id/assets/mobil/jimny/gallery/Exterior-5.webp');"><div class="caption">Suzuki Jimny — Offroad Legend</div></div>
+              <div class="slide" style="background-image:url('https://www.suzuki.co.id/assets/mobil/grand-vitara/gallery/1.webp');"><div class="caption">Grand Vitara — Hybrid Power</div></div>
+            </div>
+            <button class="ctrl left" id="prev">◀</button>
+            <button class="ctrl right" id="next">▶</button>
+          </div>
+
+          <div class="controls">
+            <input id="search" class="search" type="search" placeholder="Cari mobil atau tipe, mis. 'Ertiga GX'">
+            <select id="filterType">
+              <option value="all">Semua Tipe</option>
+              <option value="SUV">SUV</option>
+              <option value="MPV">MPV</option>
+              <option value="Hatchback">Hatchback</option>
+              <option value="Pickup">Pickup</option>
+            </select>
+            <select id="filterPrice">
+              <option value="any">Semua Harga</option>
+              <option value="<=250">≤ Rp 250 jt</option>
+              <option value="<=350">≤ Rp 350 jt</option>
+              <option value=">350">> Rp 350 jt</option>
+            </select>
+          </div>
+
+          <div id="listing" class="grid fadeIn">
+            <!-- Items populated by JS -->
+          </div>
+        </div>
+
+        <div class="card fadeIn" style="margin-top:14px">
+          <h3>Promo & Paket Kredit</h3>
+          <table>
+            <thead><tr><th>Promo</th><th>DP</th><th>Tenor</th><th>Estimasi Cicilan</th></tr></thead>
+            <tbody>
+              <tr><td>Diskon Ramadhan</td><td>Mulai Rp 10.000.000</td><td>12–60 bln</td><td>Rp 3.2 jt/bln</td></tr>
+              <tr><td>Kredit Super</td><td>Mulai Rp 15.000.000</td><td>12–72 bln</td><td>Rp 2.8 jt/bln</td></tr>
+              <tr><td>Cashback Tukar Tambah</td><td>—</td><td>—</td><td>—</td></tr>
+            </tbody>
+          </table>
+          <p class="muted">Estimasi cicilan dihitung untuk ilustrasi — tanyakan detail OTR di wilayah Anda.</p>
+        </div>
+
+      </div>
+
+      <aside class="card fadeIn">
+        <h3>Booking Test Drive</h3>
+        <form id="testDriveForm">
+          <input id="td_name" placeholder="Nama lengkap" required>
+          <input id="td_phone" placeholder="No. WhatsApp" required>
+          <select id="td_model" required>
+            <option value="Fronx">Fronx</option>
+            <option value="XL7">XL7</option>
+            <option value="Jimny">Jimny</option>
+            <option value="S-Presso">S-Presso</option>
+            <option value="Grand Vitara">Grand Vitara</option>
+            <option value="New Carry">New Carry</option>
+            <option value="Ertiga">Ertiga</option>
+          </select>
+          <input id="td_date" type="date" required>
+          <textarea id="td_note" placeholder="Catatan / Lokasi test drive"></textarea>
+          <button class="primary" type="submit">Kirim Booking via WhatsApp</button>
+        </form>
+
+        <div style="margin-top:12px">
+          <h4>Kontak Cepat</h4>
+          <p><a href="tel:+6287854322142">0878-5432-2142</a></p>
+          <p><a href="mailto:yanwaribnusuzuki@gmail.com">yanwaribnumobil@gmail.com</a></p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="card fadeIn" id="details">
+      <h3>Detail Model</h3>
+      <div id="detailPanel">
+        <!-- detail content injected here -->
+      </div>
+    </section>
+
+    <footer class="fadeIn">
+      <p>&copy; 2025 Yanwar Ibnu — Dealer Suzuki Resmi</p>
+      <p>Alamat: Jl. RE Martadinata No.59, Cipayung, Kec. Ciputat, Kota Tangerang Selatan, Banten 15411</p>
+      <p>Email: <a href="mailto:yanwaribnusuzuki@gmail.com">yanwaribnusuzuki@gmail.com</a></p>
+      <p><a href="https://www.tiktok.com/@Ibnu.Suzuki" target="_blank">TikTok: @Ibnu.Suzuki</a></p>
+    </footer>
+  </div>
+
+  <!-- Floating Action Buttons -->
+  <div class="fab">
+    <a class="book" id="fabBook" title="Booking Test Drive">📅</a>
+    <a class="phone" href="tel:+6287854322142" title="Telepon">📞</a>
+    <a class="whatsapp" href="https://wa.me/6287854322142?text=Hai%20Yanwar,%20saya%20mau%20tanya" target="_blank" title="Chat WhatsApp">💬</a>
+  </div>
+
+  <!-- Modal for model details -->
+  <div class="modal" id="modal">
+    <div class="panel">
+      <button class="close" id="closeModal">Tutup ✖</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script>
+    // Data set with models, variants, images (public sources)
+    const cars = [
+      {id:'fronx',model:'Fronx',type:'SUV',variants:[{name:'GL MT',price:220, img:'https://www.suzuki.co.id/assets/mobil/fronx/gallery/1.webp'},{name:'GL AT',price:240,img:'https://www.suzuki.co.id/assets/mobil/fronx/gallery/2.webp'},{name:'GX Hybrid',price:280,img:'https://www.suzuki.co.id/assets/mobil/fronx/gallery/3.webp'}],desc:'SUV coupe modern, cocok untuk keluarga muda.'},
+      {id:'xl7',model:'XL7',type:'SUV',variants:[{name:'Alpha Hybrid',price:320,img:'https://www.suzuki.co.id/assets/mobil/xl7-hybrid/gallery/Exterior-1.webp'},{name:'Beta Hybrid',price:300,img:'https://www.suzuki.co.id/assets/mobil/xl7-hybrid/gallery/Exterior-2.webp'},{name:'Zeta',price:285,img:'https://www.suzuki.co.id/assets/mobil/xl7-hybrid/gallery/Exterior-3.webp'}],desc:'7-seater stylish, kenyamanan untuk keluarga besar.'},
+      {id:'jimny',model:'Jimny',type:'SUV',variants:[{name:'Jimny 3 Pintu',price:350,img:'https://www.suzuki.co.id/assets/mobil/jimny/gallery/Exterior-5.webp'},{name:'Jimny 5 Pintu',price:420,img:'https://cdn.autoindustriya.com/media/catalog/product/cache/1/optimized_image/1200x300/0e82ba9e9e6a8321d8ef6e7c1282c58e/j/i/jimny-5-door-1.jpg'}],desc:'Legenda off-road, tangguh dan compact.'},
+      {id:'spresso',model:'S-Presso',type:'Hatchback',variants:[{name:'MT',price:120,img:'https://upload.wikimedia.org/wikipedia/commons/9/99/Maruti_Suzuki_S-Presso_front.jpg'},{name:'AGS',price:135,img:'https://upload.wikimedia.org/wikipedia/commons/9/99/Maruti_Suzuki_S-Presso_front.jpg'}],desc:'Hatchback kecil, sangat irit untuk penggunaan kota.'},
+      {id:'gv',model:'Grand Vitara',type:'SUV',variants:[{name:'GX Hybrid',price:410,img:'https://oto.detik.com/foto-oto/d-8223325/tampang-suzuki-grand-vitara-terbaru-harga-rp-416-juta'}],desc:'SUV berfitur lengkap dengan opsi hybrid.'},
+      {id:'carry',model:'New Carry',type:'Pickup',variants:[{name:'Flat Deck',price:160,img:'https://upload.wikimedia.org/wikipedia/commons/5/5a/Maruti_Suzuki_Carry_pickup_front.jpg'},{name:'Wide Deck',price:170,img:'https://upload.wikimedia.org/wikipedia/commons/5/5a/Maruti_Suzuki_Carry_pickup_front.jpg'}],desc:'Truk komersial andal untuk usaha.'},
+      {id:'ertiga',model:'Ertiga',type:'MPV',variants:[{name:'GA',price:210,img:'https://upload.wikimedia.org/wikipedia/commons/8/8f/Maruti_Suzuki_Ertiga_front.jpg'},{name:'GL',price:230,img:'https://upload.wikimedia.org/wikipedia/commons/8/8f/Maruti_Suzuki_Ertiga_front.jpg'},{name:'GX Hybrid',price:260,img:'https://www.suzuki.co.id/assets/mobil/ertiga/gallery/Exterior-1.webp'}],desc:'MPV keluarga, nyaman dan irit.'}
+    ];
+
+    // Populate listing
+    const listingEl = document.getElementById('listing');
+    function renderList(filterQ='',typeFilter='all',priceFilter='any'){
+      listingEl.innerHTML='';
+      const q = filterQ.trim().toLowerCase();
+      const items = [];
+      cars.forEach(car=>{
+        car.variants.forEach(v=>{
+          const show = (typeFilter==='all'||car.type===typeFilter) && (priceFilter==='any' || (priceFilter==='<=250'&&v.price<=250) || (priceFilter==='<=350'&&v.price<=350) || (priceFilter=='>350'&&v.price>350));
+          const match = (car.model+' '+v.name).toLowerCase().includes(q) || car.model.toLowerCase().includes(q) || v.name.toLowerCase().includes(q);
+          if(show && (q===''||match)){
+            items.push({car,variant:v});
+          }
+        })
+      });
+      if(items.length===0){listingEl.innerHTML='<div class="muted">Tidak ada hasil. Coba kata kunci lain.</div>';return}
+      items.forEach(obj=>{
+        const div = document.createElement('div');div.className='item fadeIn';
+        div.innerHTML = `<img src="${obj.variant.img}" alt="${obj.car.model} ${obj.variant.name}"><h4>${obj.car.model} — ${obj.variant.name}</h4><p>${obj.car.desc}</p><div class="actions"><button class="primary" data-model="${obj.car.id}" data-variant="${obj.variant.name}">Hubungi</button><button class="btn" data-detail="${obj.car.id}">Detail</button></div>`;
+        listingEl.appendChild(div);
+      })
+    }
+    renderList();
+
+    // search & filters
+    document.getElementById('search').addEventListener('input', e=> renderList(e.target.value, document.getElementById('filterType').value, document.getElementById('filterPrice').value));
+    document.getElementById('filterType').addEventListener('change', e=> renderList(document.getElementById('search').value,e.target.value,document.getElementById('filterPrice').value));
+    document.getElementById('filterPrice').addEventListener('change', e=> renderList(document.getElementById('search').value,document.getElementById('filterType').value,e.target.value));
+
+    // click handlers for Hubungi & Detail
+    listingEl.addEventListener('click', e=>{
+      const btn = e.target.closest('button'); if(!btn) return;
+      if(btn.dataset.model && btn.dataset.variant){
+        const carId = btn.dataset.model; const variant = btn.dataset.variant;
+        const car = cars.find(c=>c.id===carId);
+        const text = `Saya tertarik ${car.model} ${variant} - info lebih lanjut, mohon hubungi saya.`;
+        window.open(`https://wa.me/6287854322142?text=${encodeURIComponent(text)}`,'_blank');
+      }
+      if(btn.dataset.detail){
+        const id = btn.dataset.detail; showDetail(id);
+      }
+    })
+
+    // detail modal
+    const modal = document.getElementById('modal'); const modalContent = document.getElementById('modalContent');
+    function showDetail(id){
+      const car = cars.find(c=>c.id===id); if(!car) return;
+      modalContent.innerHTML = `<h2>${car.model}</h2><p class="muted">${car.desc}</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">${car.variants.map(v=>`<div class=\"card\" style=\"padding:8px\"><img src=\"${v.img}\" style=\"width:100%;height:140px;object-fit:cover;border-radius:8px\"><h4>${v.name}</h4><p class=\"muted\">OTR mulai Rp ${v.price} juta</p><p><button class=\"primary\" onclick=\"window.open(\'https://wa.me/6287854322142?text=${encodeURIComponent('Saya%20tertarik%20'+car.model+'%20'+v.name)}\')\">Hubungi</button></p></div>`).join('')}</div>`;
+      modal.style.display='flex';
+    }
+    document.getElementById('closeModal').addEventListener('click', ()=> modal.style.display='none');
+    modal.addEventListener('click', e=>{ if(e.target===modal) modal.style.display='none' });
+
+    // slider
+    (function(){
+      const slidesEl = document.getElementById('slides'); const slides = slidesEl.children; let idx=0; const next=document.getElementById('next'), prev=document.getElementById('prev');
+      function show(i){ idx=(i+slides.length)%slides.length; slidesEl.style.transform=`translateX(-${idx*100}%)`; }
+      next.addEventListener('click', ()=> show(idx+1)); prev.addEventListener('click', ()=> show(idx-1));
+      let auto=setInterval(()=>show(idx+1),4500);
+      [next,prev,slidesEl].forEach(el=>el.addEventListener('mouseenter', ()=> clearInterval(auto)));
+      [next,prev,slidesEl].forEach(el=>el.addEventListener('mouseleave', ()=> auto=setInterval(()=>show(idx+1),4500)));
+      show(0);
+    })();
+
+    // test drive form
+    document.getElementById('testDriveForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('td_name').value;
+      const phone = document.getElementById('td_phone').value;
+      const model = document.getElementById('td_model').value;
+      const date = document.getElementById('td_date').value;
+      const note = document.getElementById('td_note').value;
+      const text = `Booking%20Test%20Drive%20-%20${encodeURIComponent(name)}%20(${encodeURIComponent(phone)})%20ingin%20test%20drive%20${encodeURIComponent(model)}%20pada%20${encodeURIComponent(date)}.%20Catatan:%20${encodeURIComponent(note)}`;
+      window.open(`https://wa.me/6287854322142?text=${text}`,'_blank');
+    });
+
+    // FAB booking
+    document.getElementById('fabBook').addEventListener('click', ()=>{ document.getElementById('td_model').focus(); window.scrollTo({top:0,behavior:'smooth'}); document.getElementById('td_name').focus(); });
+
+    // dark mode toggle
+    const toggle = document.getElementById('toggleDark'); toggle.addEventListener('click', ()=>{
+      document.documentElement.classList.toggle('dark');
+      document.body.classList.toggle('dark');
+      toggle.textContent = document.body.classList.contains('dark')? '☀️':'🌙';
+    });
+
+    // expose source path (developer note)
+    console.log('Source file: /mnt/data/index.html');
+  </script>
+</body>
+</html>
