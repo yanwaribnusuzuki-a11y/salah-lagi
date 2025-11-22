@@ -1,2 +1,3 @@
 # Ibnu.Suzuki
-Ibnu temptnya mencari mobil suzuki resmi dengan harga termurah
+Ibnu tempatnya mencari mobil suzuki resmi dengan harga termurah
+Wujudkan Mobil Impianmu Bersama Ibnu
